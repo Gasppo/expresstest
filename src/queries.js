@@ -1,8 +1,10 @@
 import axios from "axios";
 
+const SERVER_URL = "localhost:3000";
+
 export function getEmployes(req, res) {
   axios
-    .get("http://localhost:3000/employees")
+    .get(`http://${SERVER_URL}/employees`)
     .then((response) => {
       console.log(response.data);
       res.json(response.data);
@@ -15,7 +17,7 @@ export function getEmployes(req, res) {
 
 export function getEmployesByID(req, res) {
   axios
-    .get(`http://localhost:3000/employees/${req.params.id}`)
+    .get(`http://${SERVER_URL}/employees/${req.params.id}`)
     .then((response) => {
       console.log(response.data);
       res.json(response.data);
@@ -30,7 +32,7 @@ export function patchEmployees(req, res) {
   const body = req.body;
   console.log(`Body: ${body}`);
   axios
-    .patch(`http://localhost:3000/employees/${req.params.id}`, body)
+    .patch(`http://${SERVER_URL}/employees/${req.params.id}`, body)
     .then((response) => {
       console.log(response.data);
       res.json(response.data);
@@ -43,7 +45,7 @@ export function patchEmployees(req, res) {
 
 export function deleteEmployees(req, res) {
   axios
-    .delete(`http://localhost:3000/employees/${req.params.id}`)
+    .delete(`http://${SERVER_URL}/employees/${req.params.id}`)
     .then((response) => {
       console.log(response.data);
       res.json(response.data);
@@ -58,7 +60,7 @@ export function postEmployees(req, res) {
   const body = req.body;
   console.log(`Body: ${body}`);
   axios
-    .post("http://localhost:3000/employees", body)
+    .post(`http://${SERVER_URL}/employees`, body)
     .then((response) => {
       console.log(response.data);
       res.json(response.data);
