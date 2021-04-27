@@ -1,17 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+//import { getEmployes } from './queries';
+import express from "express";
+import {
+  deleteEmployees,
+  getEmployes,
+  getEmployesByID,
+  patchEmployees,
+  postEmployees,
+} from "./queries.js";
+const app = express();
+const port = 5000;
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+app.use(express.json());
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//GET ALL
+app.get("/employees", getEmployes);
+
+//GET ID
+app.get("/employees/:id", getEmployesByID);
+
+//DELETE
+app.delete("/employees/:id", deleteEmployees);
+
+//POST
+app.post("/employees", postEmployees);
+
+//PATCH
+app.patch("/employees/:id", patchEmployees);
+
+app.get("/", (req, res) => {});
+
+app.listen(port, () => {
+  console.log(`App listening at http://localhost:${port}`);
+});
