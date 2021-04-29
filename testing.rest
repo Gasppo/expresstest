@@ -2,5 +2,5 @@ PATCH http://localhost:5000/employees/12 HTTP/1.1
 content-type: application/json
 
 { 
-    "salary": "100"
+    "salary": "100000"
 }

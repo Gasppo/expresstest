@@ -27,7 +27,9 @@ app.post("/employees", postEmployees);
 //PATCH
 app.patch("/employees/:id", patchEmployees);
 
-app.get("/", (req, res) => {});
+app.get("/", (req, res) => {
+  res.send("NO SITE HERE");
+});
 
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);

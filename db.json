@@ -7,10 +7,10 @@
       "position": "dev"
     },
     {
+      "id": 2,
       "name": "David",
       "position": "sales",
-      "salary": 5000,
-      "id": 2
+      "salary": 5000
     },
     {
       "id": 3,
@@ -26,9 +26,15 @@
     },
     {
       "name": "Chango",
-      "salary": "100",
+      "salary": "100000",
       "position": "dev",
       "id": 12
+    },
+    {
+      "name": "Peter",
+      "salary": "100",
+      "position": "sales",
+      "id": 13
     }
   ]
 }
