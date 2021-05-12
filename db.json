@@ -7,12 +7,6 @@
       "position": "dev"
     },
     {
-      "id": 2,
-      "name": "David",
-      "position": "sales",
-      "salary": 5000
-    },
-    {
       "id": 3,
       "name": "David",
       "position": "CEO",
@@ -35,6 +29,18 @@
       "salary": "100",
       "position": "sales",
       "id": 13
+    },
+    {
+      "id": 14,
+      "salary": 10000,
+      "name": "Gaspo",
+      "position": "devo"
+    },
+    {
+      "id": 15,
+      "salary": 10000,
+      "name": "Gaspo",
+      "position": "devo"
     }
   ]
 }

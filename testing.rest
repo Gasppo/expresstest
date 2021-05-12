@@ -1,6 +1,8 @@
-PATCH http://localhost:5000/employees/12 HTTP/1.1
+POST http://localhost:8080/api/employees/2 HTTP/1.1
 content-type: application/json
 
-{ 
-    "salary": "100000"
-}
+{
+      "salary": 0,
+  "name": "Gaspar",
+  "position": "dev"
+    }
